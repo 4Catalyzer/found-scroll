@@ -10,7 +10,8 @@
     "build": "rimraf lib && babel src -d lib",
     "lint": "eslint src test *.js",
     "prepublish": "npm run build",
-    "test": "npm run lint"
+    "testonly": "jest --runInBand --verbose",
+    "test": "npm run lint && npm run testonly"
   },
   "repository": {
     "type": "git",
@@ -38,17 +39,22 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.0",
+    "babel-jest": "^17.0.2",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-1": "^6.16.0",
+    "enzyme": "^2.6.0",
     "eslint": "^3.9.1",
     "eslint-config-4catalyzer-react": "^0.1.3",
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.5.0",
     "found": "^0.1.0",
-    "react": "^15.3.2",
+    "jest": "^17.0.3",
+    "react": "^15.4.1",
+    "react-addons-test-utils": "^15.4.1",
+    "react-dom": "^15.4.1",
     "rimraf": "^2.5.4"
   }
 }
