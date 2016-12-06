@@ -33,14 +33,14 @@ it('should render children', () => {
   wrapper = mount(
     <ScrollManager renderArgs={initialRenderArgs}>
       <div />
-    </ScrollManager>
+    </ScrollManager>,
   );
   expect(wrapper.find('div')).toHaveLength(1);
 
   wrapper = mount(
     <ScrollManager renderArgs={initialRenderArgs}>
       <CustomCompoment />
-    </ScrollManager>
+    </ScrollManager>,
   );
   expect(wrapper.find(CustomCompoment)).toHaveLength(1);
 });
@@ -49,7 +49,7 @@ it('should call updateScroll if location changed', () => {
   const wrapper = mount(
     <ScrollManager renderArgs={initialRenderArgs}>
       <div />
-    </ScrollManager>
+    </ScrollManager>,
   );
 
   const scrollManager = wrapper.instance();
@@ -72,7 +72,7 @@ it('should not call updateScroll if location does not change', () => {
   const wrapper = mount(
     <ScrollManager renderArgs={initialRenderArgs}>
       <div />
-    </ScrollManager>
+    </ScrollManager>,
   );
 
   const scrollManager = wrapper.instance();
@@ -90,7 +90,7 @@ it('should stop scroll behavior when it will unmount', () => {
   const wrapper = mount(
     <ScrollManager renderArgs={initialRenderArgs}>
       <div />
-    </ScrollManager>
+    </ScrollManager>,
   );
 
   const scrollManager = wrapper.instance();
@@ -107,7 +107,7 @@ describe('#shouldUpdateScroll', () => {
     const wrapper = mount(
       <ScrollManager renderArgs={initialRenderArgs}>
         <div />
-      </ScrollManager>
+      </ScrollManager>,
     );
 
     const scrollManager = wrapper.instance();
@@ -124,7 +124,7 @@ describe('#shouldUpdateScroll', () => {
         shouldUpdateScroll={shouldUpdateScroll}
       >
         <div />
-      </ScrollManager>
+      </ScrollManager>,
     );
 
     const scrollManager = wrapper.instance();
