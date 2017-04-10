@@ -1,17 +1,18 @@
 import StateStorage from 'farce/lib/StateStorage';
 import { routerShape } from 'found/lib/PropTypes';
+import PropTypes from 'prop-types';
 import React from 'react';
 import ScrollBehavior from 'scroll-behavior';
 
 const STORAGE_NAMESPACE = '@@scroll';
 
 const propTypes = {
-  shouldUpdateScroll: React.PropTypes.func,
-  renderArgs: React.PropTypes.shape({
-    location: React.PropTypes.object.isRequired,
+  shouldUpdateScroll: PropTypes.func,
+  renderArgs: PropTypes.shape({
+    location: PropTypes.object.isRequired,
     router: routerShape.isRequired,
   }).isRequired,
-  children: React.PropTypes.element,
+  children: PropTypes.element,
 };
 
 class ScrollManager extends React.Component {
