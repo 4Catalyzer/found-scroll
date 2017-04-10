@@ -1,6 +1,6 @@
 {
   "name": "found-scroll",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Scroll management for found",
   "files": [
     "lib"
