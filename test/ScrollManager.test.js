@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import ScrollManager from '../src/ScrollManager';
 
-const CustomCompoment = () => <div />;
+const CustomComponent = () => <div />;
 
 const location = {};
 const router = {
@@ -39,10 +39,10 @@ it('should render children', () => {
 
   wrapper = mount(
     <ScrollManager renderArgs={initialRenderArgs}>
-      <CustomCompoment />
+      <CustomComponent />
     </ScrollManager>,
   );
-  expect(wrapper.find(CustomCompoment)).toHaveLength(1);
+  expect(wrapper.find(CustomComponent)).toHaveLength(1);
 });
 
 it('should call updateScroll if location changed', () => {

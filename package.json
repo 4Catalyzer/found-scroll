@@ -13,6 +13,11 @@
     "testonly": "jest --runInBand --verbose",
     "test": "npm run lint && npm run testonly"
   },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/test/setup.js"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/4Catalyzer/found-scroll.git"
@@ -30,32 +35,34 @@
   "homepage": "https://github.com/4Catalyzer/found-scroll#readme",
   "dependencies": {
     "farce": "^0.2.1",
-    "prop-types": "^15.5.6",
+    "prop-types": "^15.6.0",
     "scroll-behavior": "^0.9.3"
   },
   "peerDependencies": {
     "found": ">=0.1.0",
-    "react": ">=0.14.0"
+    "react": "^0.14.9 || >=15.3.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-eslint": "^7.2.1",
-    "babel-jest": "^19.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^21.2.0",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-latest": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
-    "enzyme": "^2.8.0",
-    "eslint": "^3.19.0",
-    "eslint-config-4catalyzer-react": "^0.2.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.10.3",
-    "found": "^0.2.2",
-    "jest": "^19.0.2",
-    "react": "^15.5.3",
-    "react-addons-test-utils": "^15.5.1",
-    "react-dom": "^15.5.3",
-    "rimraf": "^2.6.1"
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-16": "^1.0.0",
+    "eslint": "^4.7.2",
+    "eslint-config-4catalyzer-react": "^0.3.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.4.0",
+    "found": "^0.3.4",
+    "jest": "^21.2.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-test-renderer": "^16.0.0",
+    "rimraf": "^2.6.2"
   }
 }
