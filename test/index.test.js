@@ -1,5 +1,4 @@
-import { ScrollManager } from '../src/';
-
+import { ScrollManager } from '../src';
 
 it('exports ScrollManager', () => {
   expect(ScrollManager).toBeDefined();
