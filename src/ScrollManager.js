@@ -32,9 +32,9 @@ class ScrollManager extends React.Component {
     this.scrollBehavior.updateScroll(null, renderArgs);
   }
 
-  componentDidUpdate(prevProps) {
-    const { renderArgs } = this.props;
-    const prevRenderArgs = prevProps.renderArgs;
+  componentWillUpdate(nextProps) {
+    const { renderArgs } = nextProps;
+    const prevRenderArgs = this.props.renderArgs;
 
     if (renderArgs.location === prevRenderArgs.location) {
       return;
