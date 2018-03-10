@@ -62,6 +62,7 @@ it('should call updateScroll if location changed', () => {
     renderArgs: {
       location: newLocation,
       router,
+      elements: [<div />],
     },
   });
 

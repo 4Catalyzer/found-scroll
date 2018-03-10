@@ -1,4 +1,5 @@
 import StateStorage from 'farce/lib/StateStorage';
+import HttpError from 'found/lib/HttpError';
 import { routerShape } from 'found/lib/PropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -12,8 +13,10 @@ const propTypes = {
   renderArgs: PropTypes.shape({
     location: PropTypes.object.isRequired,
     router: routerShape.isRequired,
+    elements: PropTypes.array,
+    error: PropTypes.instanceOf(HttpError),
   }).isRequired,
-  children: PropTypes.element,
+  children: PropTypes.node,
 };
 
 const defaultProps = {
@@ -34,22 +37,37 @@ class ScrollManager extends React.Component {
       shouldUpdateScroll: this.shouldUpdateScroll,
     });
 
-    this.scrollBehavior.updateScroll(null, renderArgs);
+    this.prevRenderArgs = {
+      location: null,
+    };
   }
 
-  componentDidUpdate(prevProps) {
-    const { renderArgs } = this.props;
-    const prevRenderArgs = prevProps.renderArgs;
+  componentDidMount() {
+    this.maybeUpdateScroll();
+  }
 
-    if (renderArgs.location === prevRenderArgs.location) {
-      return;
-    }
-
-    this.scrollBehavior.updateScroll(prevRenderArgs, renderArgs);
+  componentDidUpdate() {
+    this.maybeUpdateScroll();
   }
 
   componentWillUnmount() {
     this.scrollBehavior.stop();
+  }
+
+  maybeUpdateScroll() {
+    const { renderArgs } = this.props;
+
+    if (
+      renderArgs.location === this.prevRenderArgs.location ||
+      !(renderArgs.elements || renderArgs.error)
+    ) {
+      // If the location hasn't actually changed, or if we're in a global
+      // pending state, don't update the scroll position.
+      return;
+    }
+
+    this.scrollBehavior.updateScroll(this.prevRenderArgs, renderArgs);
+    this.prevRenderArgs = renderArgs;
   }
 
   shouldUpdateScroll = (prevRenderArgs, renderArgs) => {
