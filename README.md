@@ -63,6 +63,28 @@ const shouldUpdateScrollByRoute = (prevRenderArgs, { routes }) => {
 
   return true;
 };
+
+const render = renderArgs => (
+  <ScrollManager
+    shouldUpdateScroll={shouldUpdateScrollByPathname}
+    renderArgs={renderArgs}
+  >
+    {/* ... */}
+  </ScrollManager>
+);
+```
+
+You can customize `<ScrollManager>` even further by providing a `createScrollBehavior` callback that creates the scroll behavior object. This allows using a custom subclass of `ScrollBehavior` from scroll-behavior with custom logic. When using a custom `createScrollBehavior` callback, you can continue to specify the `shouldUpdateScroll` callback as above.
+
+```js
+const render = renderArgs => (
+  <ScrollManager
+    createScrollBehavior={config => new MyScrollBehavior(config)}
+    renderArgs={renderArgs}
+  >
+    {/* ... */}
+  </ScrollManager>
+);
 ```
 
 [npm-badge]: https://img.shields.io/npm/v/found-scroll.svg

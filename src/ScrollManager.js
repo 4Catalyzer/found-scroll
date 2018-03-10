@@ -8,6 +8,7 @@ const STORAGE_NAMESPACE = '@@scroll';
 
 const propTypes = {
   shouldUpdateScroll: PropTypes.func,
+  createScrollBehavior: PropTypes.func.isRequired,
   renderArgs: PropTypes.shape({
     location: PropTypes.object.isRequired,
     router: routerShape.isRequired,
@@ -15,14 +16,18 @@ const propTypes = {
   children: PropTypes.element,
 };
 
+const defaultProps = {
+  createScrollBehavior: config => new ScrollBehavior(config),
+};
+
 class ScrollManager extends React.Component {
   constructor(props, context) {
     super(props, context);
 
-    const { renderArgs } = props;
+    const { createScrollBehavior, renderArgs } = props;
     const { router } = renderArgs;
 
-    this.scrollBehavior = new ScrollBehavior({
+    this.scrollBehavior = createScrollBehavior({
       addTransitionHook: router.addTransitionHook,
       stateStorage: new StateStorage(router, STORAGE_NAMESPACE),
       getCurrentLocation: () => this.props.renderArgs.location,
@@ -65,5 +70,6 @@ class ScrollManager extends React.Component {
 }
 
 ScrollManager.propTypes = propTypes;
+ScrollManager.defaultProps = defaultProps;
 
 export default ScrollManager;
