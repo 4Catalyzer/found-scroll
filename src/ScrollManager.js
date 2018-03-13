@@ -37,9 +37,7 @@ class ScrollManager extends React.Component {
       shouldUpdateScroll: this.shouldUpdateScroll,
     });
 
-    this.prevRenderArgs = {
-      location: null,
-    };
+    this.prevRenderArgs = null;
   }
 
   componentDidMount() {
@@ -56,9 +54,10 @@ class ScrollManager extends React.Component {
 
   maybeUpdateScroll() {
     const { renderArgs } = this.props;
+    const prevLocation = this.prevRenderArgs && this.prevRenderArgs.location;
 
     if (
-      renderArgs.location === this.prevRenderArgs.location ||
+      renderArgs.location === prevLocation ||
       !(renderArgs.elements || renderArgs.error)
     ) {
       // If the location hasn't actually changed, or if we're in a global
