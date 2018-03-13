@@ -49,7 +49,7 @@ The callback can return:
 
 ```js
 const shouldUpdateScrollByPathname = (prevRenderArgs, { location }) => (
-  prevRenderArgs && location.pathname !== prevRenderArgs.location.pathname
+  !prevRenderArgs || location.pathname !== prevRenderArgs.location.pathname
 );
 
 const shouldUpdateScrollByRoute = (prevRenderArgs, { routes }) => {
