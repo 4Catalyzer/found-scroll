@@ -1477,15 +1477,15 @@ escodegen@^1.6.1:
     source-map "~0.5.6"
 
 eslint-config-4catalyzer-react@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-4catalyzer-react/-/eslint-config-4catalyzer-react-0.3.2.tgz#3c73da930cea9c02cf048239f1ded5dedfecaa20"
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/eslint-config-4catalyzer-react/-/eslint-config-4catalyzer-react-0.3.3.tgz#0e0a5b42fd8626db630600ac37ab728bc4f65cbf"
   dependencies:
-    eslint-config-4catalyzer "^0.3.0"
+    eslint-config-4catalyzer "^0.3.3"
     eslint-config-airbnb "^15.1.0"
 
-eslint-config-4catalyzer@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-4catalyzer/-/eslint-config-4catalyzer-0.3.0.tgz#53b49c2c8fbed50dd19850067051e917c3ef5266"
+eslint-config-4catalyzer@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/eslint-config-4catalyzer/-/eslint-config-4catalyzer-0.3.3.tgz#b30d55fc73fea691268da8aff4af0c4be640706e"
   dependencies:
     eslint-config-airbnb-base "^11.3.1"
 
