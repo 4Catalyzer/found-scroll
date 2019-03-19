@@ -77,7 +77,9 @@ class ScrollManager extends React.Component {
 
     // Hack to allow access to ScrollBehavior internals (e.g. stateStorage).
     return shouldUpdateScroll.call(
-      this.scrollBehavior, prevRenderArgs, renderArgs,
+      this.scrollBehavior,
+      prevRenderArgs,
+      renderArgs,
     );
   };
 
