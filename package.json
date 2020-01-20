@@ -19,10 +19,7 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
+    "*.js": "eslint --fix"
   },
   "prettier": {
     "printWidth": 79,
@@ -79,7 +76,7 @@
     "found": "^0.4.9",
     "husky": "^4.0.10",
     "jest": "^24.9.0",
-    "lint-staged": "^9.5.0",
+    "lint-staged": "^10.0.0",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
