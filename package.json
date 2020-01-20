@@ -19,10 +19,7 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
+    "*.js": "eslint --fix"
   },
   "prettier": {
     "printWidth": 79,
