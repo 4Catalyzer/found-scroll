@@ -56,7 +56,7 @@
     "react": "^0.14.9 || >=15.3.0"
   },
   "devDependencies": {
-    "@4c/babel-preset": "^7.3.0",
+    "@4c/babel-preset": "^7.3.2",
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
     "babel-jest": "^25.1.0",
@@ -64,8 +64,8 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
-    "eslint-config-4catalyzer-jest": "^2.0.3",
-    "eslint-config-4catalyzer-react": "^1.0.2",
+    "eslint-config-4catalyzer-jest": "^2.0.4",
+    "eslint-config-4catalyzer-react": "^1.0.4",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jest": "^23.7.0",
@@ -74,7 +74,7 @@
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^2.3.0",
     "found": "^0.4.9",
-    "husky": "^4.2.1",
+    "husky": "^4.2.3",
     "jest": "^25.1.0",
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
