@@ -49,7 +49,7 @@
   "dependencies": {
     "farce": "^0.2.8",
     "prop-types": "^15.7.2",
-    "scroll-behavior": "^0.9.10"
+    "scroll-behavior": "^0.10.0"
   },
   "peerDependencies": {
     "found": ">=0.1.0",
