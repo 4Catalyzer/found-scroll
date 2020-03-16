@@ -4870,6 +4870,11 @@ p-try@^2.0.0:
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
 
+page-lifecycle@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/page-lifecycle/-/page-lifecycle-0.1.2.tgz#f17a083c082bd5ababddd77f1025a4b1c8808012"
+  integrity sha512-+3uccYgL0CXG0KSXRxZi4uc2E6mqFWV5HqiJJgcnaJCiS0LqiuJ4vB420N21NFuLvuvLB4Jr5drgQ2NXAXF9Iw==
+
 parent-module@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/parent-module/-/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"
@@ -5588,13 +5593,14 @@ schema-utils@^2.2.0:
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
 
-scroll-behavior@^0.9.10:
-  version "0.9.12"
-  resolved "https://registry.yarnpkg.com/scroll-behavior/-/scroll-behavior-0.9.12.tgz#1c22d273ec4ce6cd4714a443fead50227da9424c"
-  integrity sha512-18sirtyq1P/VsBX6O/vgw20Np+ngduFXEMO4/NDFXabdOKBL2kjPVUpz1y0+jm99EWwFJafxf5/tCyMeXt9Xyg==
+scroll-behavior@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/scroll-behavior/-/scroll-behavior-0.10.0.tgz#046b3a074ed9de4dd491128aaea4d23b6364f9ad"
+  integrity sha512-ayL5Hb+klX8+17uQB4y+DheT9h/1a8oRcs84XFvnKBkxR9f4PeMvtiOELTs39ISnbx+fdSxOjlwyMaIWVf/x9A==
   dependencies:
     dom-helpers "^3.4.0"
     invariant "^2.2.4"
+    page-lifecycle "^0.1.2"
 
 semver-compare@^1.0.0:
   version "1.0.0"
