@@ -20,7 +20,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  createScrollBehavior: config => new ScrollBehavior(config),
+  createScrollBehavior: (config) => new ScrollBehavior(config),
 };
 
 class ScrollManager extends React.Component {
