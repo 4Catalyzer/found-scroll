@@ -47,7 +47,7 @@
   },
   "homepage": "https://github.com/4Catalyzer/found-scroll#readme",
   "dependencies": {
-    "farce": "^0.2.8",
+    "farce": "^0.3.0",
     "prop-types": "^15.7.2",
     "scroll-behavior": "^0.10.0"
   },
