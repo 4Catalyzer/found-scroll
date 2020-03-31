@@ -2798,6 +2798,17 @@ farce@^0.3.0:
     redux "^4.0.4"
     warning "^4.0.3"
 
+farce@^0.4.0:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/farce/-/farce-0.4.1.tgz#6e1b62f53636e55b706b9672adbe560bc223c02f"
+  integrity sha512-qhxBlWEIK3w1uvOylPKBNDTUQz6hF2NHgOgWei91naaYrck3p4o6Z3dBa1Dm2jhYBaGjZLEC102hqqBbSCWn3Q==
+  dependencies:
+    invariant "^2.2.4"
+    is-promise "^2.1.0"
+    query-string "^5.1.1"
+    redux "^4.0.4"
+    warning "^4.0.3"
+
 fast-deep-equal@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.1.tgz#545145077c501491e33b15ec408c294376e94ae4"
