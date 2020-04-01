@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 
-import ScrollManager from '../src/ScrollManager';
+import { ScrollManager } from '../src';
 
 const CustomComponent = () => <div />;
 
@@ -19,7 +19,7 @@ const router = {
     isActive: jest.fn(),
     format: jest.fn(),
   },
-  addTransitionHook: jest.fn(),
+  addNavigationListener: jest.fn(),
 };
 
 const initialRenderArgs = {
