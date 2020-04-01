@@ -15,10 +15,8 @@ const render = createRender({ renderError });
 const BrowserRouter = createBrowserRouter({
   routeConfig,
 
-  render: renderArgs => (
-    <ScrollManager renderArgs={renderArgs}>
-      {render(renderArgs)}
-    </ScrollManager>
+  render: (renderArgs) => (
+    <ScrollManager renderArgs={renderArgs}>{render(renderArgs)}</ScrollManager>
   ),
 });
 ```
@@ -48,23 +46,22 @@ The callback can return:
 - a truthy value to emulate the browser default scroll behavior
 
 ```js
-const shouldUpdateScrollByPathname = (prevRenderArgs, { location }) => (
-  !prevRenderArgs || location.pathname !== prevRenderArgs.location.pathname
-);
+const shouldUpdateScrollByPathname = (prevRenderArgs, { location }) =>
+  !prevRenderArgs || location.pathname !== prevRenderArgs.location.pathname;
 
 const shouldUpdateScrollByRoute = (prevRenderArgs, { routes }) => {
-  if (routes.some(route => route.ignoreScrollBehavior)) {
+  if (routes.some((route) => route.ignoreScrollBehavior)) {
     return false;
   }
 
-  if (routes.some(route => route.scrollToTop)) {
+  if (routes.some((route) => route.scrollToTop)) {
     return [0, 0];
   }
 
   return true;
 };
 
-const render = renderArgs => (
+const render = (renderArgs) => (
   <ScrollManager
     shouldUpdateScroll={shouldUpdateScrollByPathname}
     renderArgs={renderArgs}
@@ -77,9 +74,9 @@ const render = renderArgs => (
 You can customize `<ScrollManager>` even further by providing a `createScrollBehavior` callback that creates the scroll behavior object. This allows using a custom subclass of `ScrollBehavior` from scroll-behavior with custom logic. When using a custom `createScrollBehavior` callback, you can continue to specify the `shouldUpdateScroll` callback as above.
 
 ```js
-const render = renderArgs => (
+const render = (renderArgs) => (
   <ScrollManager
-    createScrollBehavior={config => new MyScrollBehavior(config)}
+    createScrollBehavior={(config) => new MyScrollBehavior(config)}
     renderArgs={renderArgs}
   >
     {/* ... */}

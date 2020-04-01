@@ -1,6 +1,6 @@
-import StateStorage from 'farce/lib/StateStorage';
-import HttpError from 'found/lib/HttpError';
-import { routerShape } from 'found/lib/PropTypes';
+import StateStorage from 'farce/StateStorage';
+import HttpError from 'found/HttpError';
+import { routerShape } from 'found/PropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ScrollBehavior from 'scroll-behavior';
@@ -31,7 +31,7 @@ class ScrollManager extends React.Component {
     const { router } = renderArgs;
 
     this.scrollBehavior = createScrollBehavior({
-      addTransitionHook: router.addTransitionHook,
+      addNavigationListener: router.addNavigationListener,
       stateStorage: new StateStorage(router, STORAGE_NAMESPACE),
       getCurrentLocation: () => this.props.renderArgs.location,
       shouldUpdateScroll: this.shouldUpdateScroll,
