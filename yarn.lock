@@ -2848,13 +2848,13 @@ extsprintf@^1.2.0:
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
 
-farce@^0.4.0, farce@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/farce/-/farce-0.4.1.tgz#6e1b62f53636e55b706b9672adbe560bc223c02f"
-  integrity sha512-qhxBlWEIK3w1uvOylPKBNDTUQz6hF2NHgOgWei91naaYrck3p4o6Z3dBa1Dm2jhYBaGjZLEC102hqqBbSCWn3Q==
+farce@^0.4.0, farce@^0.4.3:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/farce/-/farce-0.4.4.tgz#083ebdebe987bd08969c6f40ab78ec8bee5b79c4"
+  integrity sha512-sZiRNPTYU2EyY9UvqkzLWHD1nXqnS96WuJWX993a5NAPKxqf1RjMPf83kfNfY8lx2+ndms36DjWbzKpvDZMdSw==
   dependencies:
     invariant "^2.2.4"
-    is-promise "^2.1.0"
+    is-promise "^4.0.0"
     query-string "^5.1.1"
     redux "^4.0.4"
     warning "^4.0.3"
@@ -2977,15 +2977,15 @@ form-data@~2.3.2:
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
 
-found@^0.5.5:
-  version "0.5.5"
-  resolved "https://registry.yarnpkg.com/found/-/found-0.5.5.tgz#b581caa14b5eba1e1ed52c696f148eddb2e8ba95"
-  integrity sha512-/OQw+t6imImSiehiJvqAqQ3J3tcWC2maR72rYpJyYxgy69TwTCIHCe2GFaHOQhImbEV7AWnsR6r+iYMJNMbkxQ==
+found@^0.5.7:
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/found/-/found-0.5.7.tgz#7d39bd7af41b144badf1ee835148b6ec3455cf25"
+  integrity sha512-8YRMckz2BGPvqZckgLKK8EHwLdQU/8xz7ma6vtIc9/pfRF4QDoVn0ZsXhdoPu3tps2Z1yr3qtFvM2NisDgMdFw==
   dependencies:
     "@babel/runtime-corejs3" "^7.6.2"
     "@restart/context" "^2.1.4"
     "@types/react" "^16.9.31"
-    farce "^0.4.1"
+    farce "^0.4.3"
     invariant "^2.2.4"
     is-promise "^4.0.0"
     lodash "^4.17.15"
@@ -3537,11 +3537,6 @@ is-potential-custom-element-name@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-potential-custom-element-name/-/is-potential-custom-element-name-1.0.0.tgz#0c52e54bcca391bb2c494b21e8626d7336c6e397"
   integrity sha1-DFLlS8yjkbssSUsh6GJtczbG45c=
-
-is-promise@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/is-promise/-/is-promise-2.1.0.tgz#79a2a9ece7f096e80f36d2b2f3bc16c1ff4bf3fa"
-  integrity sha1-eaKp7OfwlugPNtKy87wWwf9L8/o=
 
 is-promise@^4.0.0:
   version "4.0.0"
