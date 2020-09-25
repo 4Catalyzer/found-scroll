@@ -13,13 +13,13 @@ const propTypes = {
   renderArgs: PropTypes.shape({
     location: PropTypes.object.isRequired,
     router: routerShape.isRequired,
-    elements: PropTypes.arrayOf([
+    elements: PropTypes.arrayOf(
       PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.element,
         PropTypes.func,
       ]),
-    ]),
+    ),
     error: PropTypes.instanceOf(HttpError),
   }).isRequired,
   children: PropTypes.node,

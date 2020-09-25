@@ -1,7 +1,0 @@
-!.babelrc.js
-!.eslintrc.js
-
-**/coverage/
-**/lib/
-**/es/
-**/node_modules/
