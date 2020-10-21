@@ -47,4 +47,4 @@ export interface ScrollManagerProps {
   children?: React.ReactNode;
 }
 
-export default class ScrollManager extends Component<ScrollManagerProps> {}
+export class ScrollManager extends Component<ScrollManagerProps> {}
