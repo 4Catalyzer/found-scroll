@@ -34,6 +34,23 @@ $ npm i -S found-scroll
 
 When constructing a router, in the `render` method, wrap the rendered element with `<ScrollManager>`, and pass in `renderArgs` as a prop, as in the above example.
 
+### Scrollable Containers
+
+Generally only the `window` scroll position is restored for a location. For
+cases where you also want to restore alternative scroll container there is `useScrollContainer`
+
+```jsx
+import { useScrollContainer } from 'found-scroll';
+
+function MyScrollView() {
+  const scrollRef = useScrollContainer('my-scroll-view');
+
+  return <div ref={scrollRef} />;
+}
+```
+
+Scroll containers are identified with a 'scrollKey'. There should only be one element associated with a given key for any given location. Think of it as similar to React's `key` prop, in that it provides a stable identity for an element across renders.
+
 ### Custom scroll behavior
 
 You can provide a custom `shouldUpdateScroll` callback as a prop to `<ScrollManager>`. This callback receives the previous and the current `renderArgs`.

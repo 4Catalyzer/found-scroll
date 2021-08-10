@@ -6,6 +6,7 @@ module.exports = (api) => ({
         modules: api.env() === 'esm' ? false : 'commonjs',
       },
     ],
+    '@babel/typescript',
   ],
   plugins: [api.env() !== 'esm' && 'add-module-exports'].filter(Boolean),
 });
