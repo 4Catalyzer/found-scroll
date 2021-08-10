@@ -77,10 +77,8 @@ class ScrollManager extends React.Component<ScrollManagerProps> {
   constructor(props: ScrollManagerProps) {
     super(props);
 
-    const {
-      createScrollBehavior = defaultCreateScrollBehavior,
-      renderArgs,
-    } = props;
+    const { createScrollBehavior = defaultCreateScrollBehavior, renderArgs } =
+      props;
     const { router } = renderArgs;
 
     this.scrollBehavior = createScrollBehavior!({
