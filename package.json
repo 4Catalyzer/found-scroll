@@ -62,12 +62,12 @@
     "@4c/cli": "^2.2.9",
     "@4c/tsconfig": "^0.4.0",
     "@babel/cli": "^7.16.0",
-    "@babel/core": "^7.16.0",
-    "@babel/preset-typescript": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/preset-typescript": "^7.16.5",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
-    "babel-jest": "^27.4.4",
+    "babel-jest": "^27.4.5",
     "babel-plugin-add-module-exports": "^1.0.4",
     "cpy-cli": "^3.1.1",
     "enzyme": "^3.11.0",
@@ -84,12 +84,12 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "found": "^0.6.0",
     "hookem": "^1.0.9",
-    "jest": "^27.4.4",
+    "jest": "^27.4.5",
     "lint-staged": "^11.2.6",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-test-renderer": "^17.0.2",
-    "typescript": "^4.5.3"
+    "typescript": "^4.5.4"
   }
 }
