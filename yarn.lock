@@ -3880,10 +3880,10 @@ eslint-config-4catalyzer-jest@^2.2.0:
   resolved "https://registry.yarnpkg.com/eslint-config-4catalyzer-jest/-/eslint-config-4catalyzer-jest-2.2.0.tgz#77628b61a43112dc647461dc94ccedb8fd84c8f4"
   integrity sha512-LAFEfZEKo96c/n3Diaa03/5mXZal2ZbdbmhUvw5+9qFPFNV/79/mZyxOQWUfbVNDDBlqu3Bk5/1J82Y85x1n+A==
 
-eslint-config-4catalyzer-react@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-4catalyzer-react/-/eslint-config-4catalyzer-react-1.2.1.tgz#f498e4bc42fb850f86afb0d8d80ea44aa3e9c3a6"
-  integrity sha512-HK4gWhlY657Yga6WRdichxiHH6MKzQ+aFXV91X8jhVAjIIGaD9PakIOVnA8NcfgA0kJC7I3X4yL1F2L9HqhTrA==
+eslint-config-4catalyzer-react@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/eslint-config-4catalyzer-react/-/eslint-config-4catalyzer-react-1.2.2.tgz#08b6ead0d365062e6bb02f108ea4b4462403b767"
+  integrity sha512-2NkBPp9OJTjQQMwt1cdHmm1jLqmnBkDA8wwe30PCsXjM2a//ZWlEt4JpUphkCNCtevuC5sKZtp/72sgifTwLRw==
   dependencies:
     eslint-config-4catalyzer "^1.4.1"
     eslint-config-airbnb "^19.0.1"
@@ -4012,10 +4012,10 @@ eslint-plugin-react-hooks@^4.3.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.3.0.tgz#318dbf312e06fab1c835a4abef00121751ac1172"
   integrity sha512-XslZy0LnMn+84NEG9jSGR6eGqaZB3133L8xewQo3fQagbQuGt7a63gf+P1NGKZavEYEC3UXaWEAA/AqDkuN6xA==
 
-eslint-plugin-react@^7.27.1:
-  version "7.27.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.27.1.tgz#469202442506616f77a854d91babaae1ec174b45"
-  integrity sha512-meyunDjMMYeWr/4EBLTV1op3iSG3mjT/pz5gti38UzfM4OPpNc2m0t2xvKCOMU5D6FSdd34BIMFOvQbW+i8GAA==
+eslint-plugin-react@^7.28.0:
+  version "7.28.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.28.0.tgz#8f3ff450677571a659ce76efc6d80b6a525adbdf"
+  integrity sha512-IOlFIRHzWfEQQKcAD4iyYDndHwTQiCMcJVJjxempf203jnNLUnW34AXLrV33+nEXoifJE2ZEGmcjKPL8957eSw==
   dependencies:
     array-includes "^3.1.4"
     array.prototype.flatmap "^1.2.5"
