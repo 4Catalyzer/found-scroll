@@ -83,7 +83,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "found": "^0.6.0",
-    "hookem": "^1.0.9",
+    "hookem": "^2.0.1",
     "jest": "^27.5.1",
     "lint-staged": "^11.2.6",
     "prettier": "^2.5.1",
