@@ -58,7 +58,7 @@
     "react": "^0.14.9 || >=15.3.0"
   },
   "devDependencies": {
-    "@4c/babel-preset": "^8.1.2",
+    "@4c/babel-preset": "^9.1.0",
     "@4c/cli": "^2.2.9",
     "@4c/tsconfig": "^0.4.0",
     "@babel/cli": "^7.17.3",
