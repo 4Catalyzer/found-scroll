@@ -85,7 +85,7 @@
     "found": "^0.6.0",
     "hookem": "^1.0.9",
     "jest": "^27.5.1",
-    "lint-staged": "^11.2.6",
+    "lint-staged": "^12.4.1",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
