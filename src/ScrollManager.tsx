@@ -1,7 +1,7 @@
 import StateStorage from 'farce/StateStorage';
-import type { Location, RenderArgs, Router } from 'found';
+import type { Location, RenderArgsElements, Router } from 'found';
 import HttpError from 'found/HttpError';
-import React from 'react';
+import React, { Component, ReactNode, createContext } from 'react';
 import ScrollBehavior, { ScrollTarget } from 'scroll-behavior';
 
 const STORAGE_NAMESPACE = '@@scroll';
@@ -37,7 +37,7 @@ export interface CreateScrollBehaviorConfig {
 export interface ScrollManagerRenderArgs {
   location: Location;
   router: Router;
-  elements?: React.ReactNode[];
+  elements?: RenderArgsElements[];
   error?: HttpError;
 }
 
@@ -53,21 +53,19 @@ export interface ScrollManagerProps {
   ) => ScrollBehavior<Location, ScrollManagerRenderArgs>;
 
   renderArgs: ScrollManagerRenderArgs;
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 export interface ScrollContextValue {
   scrollBehavior: ScrollBehavior<Location<any>, ScrollManagerRenderArgs>;
   registerScrollElement: (key: string, element: HTMLElement) => () => void;
 }
-export const ScrollContext = React.createContext<ScrollContextValue | null>(
-  null,
-);
+export const ScrollContext = createContext<ScrollContextValue | null>(null);
 
 const defaultCreateScrollBehavior = (config: CreateScrollBehaviorConfig) =>
   new ScrollBehavior(config);
 
-class ScrollManager extends React.Component<ScrollManagerProps> {
+class ScrollManager extends Component<ScrollManagerProps> {
   prevRenderArgs: ScrollManagerRenderArgs | null = null;
 
   readonly scrollBehavior: ScrollBehavior<Location, ScrollManagerRenderArgs>;
@@ -126,8 +124,8 @@ class ScrollManager extends React.Component<ScrollManagerProps> {
   }
 
   shouldUpdateScroll = (
-    prevRenderArgs: RenderArgs,
-    renderArgs: RenderArgs,
+    prevRenderArgs: ScrollManagerRenderArgs,
+    renderArgs: ScrollManagerRenderArgs,
   ) => {
     const { shouldUpdateScroll } = this.props;
     if (!shouldUpdateScroll) {
